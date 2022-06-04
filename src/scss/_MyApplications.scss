@@ -1,0 +1,84 @@
+.MyApplicationFormatter {
+  .myapplication_container {
+    position: relative;
+    padding: 1.25rem;
+    background: $white;
+    .folder_buttons {
+      display: inline-block;
+      .custom {
+        color: $gray;
+        padding: 1.25rem 0;
+        background: transparent;
+        outline: none;
+        border: none;
+        display: inline-flex;
+        justify-content: center;
+        text-decoration: none;
+        padding-right: 1.25rem;
+        &.active {
+          color: $blue;
+          font-weight: 800;
+        }
+        ~ .underline {
+          @include Transform(translate(0));
+          width: 13.5rem;
+          height: 0.25rem;
+          background-color: $blue;
+          @include Transition(250ms ease-in-out transform);
+          &.active-0 {
+            @include Transform(translateX(0));
+          }
+          &.active-1 {
+            @include Transform(translateX(13.8rem));
+            width: 14.4rem;
+          }
+          &.active-2 {
+            @include Transform(translateX(28.3rem));
+            width: 13.7rem;
+          }
+        }
+      }
+      &:before {
+        position: absolute;
+        content: "";
+        right: 0;
+        left: 0;
+        height: 1rem;
+        background-color: $gold;
+        top: -1rem;
+      }
+
+      &:after {
+        position: absolute;
+        content: "";
+        right: 0;
+        left: 0;
+        height: 2rem;
+        background-color: $blue;
+        top: -3rem;
+      }
+    }
+
+    @include breakpoint-screen(xs) {
+      .process_request_container {
+        .folder_buttons {
+          .custom {
+            width: 5.75rem;
+            ~ .underline {
+              width: 0;
+              &.active-0 {
+                @include Transform(translateX(0));
+              }
+              &.active-1 {
+                @include Transform(translateX());
+              }
+              &.active-2 {
+                @include Transform(translateX());
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

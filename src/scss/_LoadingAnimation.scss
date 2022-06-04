@@ -1,0 +1,22 @@
+.loading_container {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.loading_icon {
+  margin-left: auto;
+  margin-right: auto;
+  height: 5rem;
+  width: auto;
+  margin-bottom: 50rem;
+  @include Animation(loadingAnim 5000ms infinite linear);
+}
+
+@keyframes loadingAnim {
+  0% {
+    @include Transform(rotate(0deg));
+  }
+  100% {
+    @include Transform(rotate(360deg));
+  }
+}

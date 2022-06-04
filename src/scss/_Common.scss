@@ -1,0 +1,77 @@
+$header: $blue;
+$header2: $gold;
+$text-white: $white;
+$text-black: $black;
+$text-gray: $black-999;
+
+.container {
+  margin: 0 auto;
+}
+
+button {
+  font-family: $Montserrat;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+  border: none;
+  .icon {
+    margin-left: 5px;
+  }
+  &.primary {
+    color: $text-white;
+    &.solid {
+      padding: 0.5rem;
+      background-color: $header;
+      border: none;
+      &:hover {
+        background-color: lighten($header, 10%);
+      }
+    }
+  }
+  &.secondary {
+    color: $blue-1;
+    &.outline {
+      background-color: $text-white;
+      border: $blue-1 solid 1px;
+      padding: 0.5rem;
+      &:hover {
+        background-color: $blue-2;
+        color: $text-white;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 29.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 31rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 46rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 57.25rem;
+  }
+}

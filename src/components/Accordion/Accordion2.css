@@ -1,0 +1,38 @@
+.accordion__section2 {
+  display: flex;
+  flex-direction: column;
+}
+.accordion2 {
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  transition: background-color 0.2s ease;
+  margin-bottom: 10px;
+}
+.accordion2:hover,
+.profile_active2 {
+  background: #021056;
+}
+.accordion__title2 {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+.accordion__icon2 {
+  margin-left: auto;
+  transition: transform 0.2s ease;
+}
+.rotate2 {
+  transform: rotate(90deg);
+}
+.accordion__content2 {
+  background: transparent;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}

@@ -1,0 +1,33 @@
+.dialogBtn_no {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.dialogBtn_yes {
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.dialogBtn_no:hover {
+  box-shadow: 0px 1px 2px 1px gray;
+}
+
+.dialogBtn_yes:hover {
+  box-shadow: 0px 1px 2px 1px gray;
+}
+
+.alert_icon {
+  height: 100px;
+  padding: 0;
+}
+
+.alert_yesBtn {
+  height: 35px;
+  border: none;
+}

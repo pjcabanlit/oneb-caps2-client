@@ -1,0 +1,363 @@
+.announcement_container {
+  h3 {
+    color: $blue;
+  }
+  .newsletter_button {
+    text-align: center;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card_holder {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1.25rem;
+    width: 100%;
+    .card {
+      display: flex;
+      border: 1px $gray-ccc solid;
+      border-radius: 4px;
+      overflow: hidden;
+
+      .card_body {
+        padding: 1.25rem;
+        .subtitle {
+          color: $text-gray;
+        }
+        .announcement_title {
+          margin-top: 0;
+        }
+        .description {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+        button {
+          float: right;
+        }
+      }
+      .card_header {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          aspect-ratio: 16/9;
+        }
+      }
+      &:first-child {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        height: auto;
+        flex-flow: nowrap;
+        .card_header {
+          width: 40%;
+          flex-grow: 1;
+        }
+        .card_body {
+          width: 60%;
+          flex-grow: 2;
+        }
+      }
+      &:not(:first-child) {
+        flex: 0 1 33.3%;
+        flex-flow: column nowrap;
+      }
+    }
+    .loading_card {
+      display: flex;
+      border: 1px $gray-ccc solid;
+      border-radius: 4px;
+      overflow: hidden;
+      flex: 0 1 33.3%;
+      flex-flow: column nowrap;
+      background-color: $gray-lighter;
+      .card_body {
+        padding: 1.25rem;
+        .subtitle {
+          color: $text-gray;
+          width: 15ch;
+          background-size: 200% 200%;
+          border-radius: 4px;
+          background: linear-gradient(
+            130deg,
+            $gray-ccc,
+            $gray-light,
+            $gray-ccc
+          );
+          animation: Animation 5s ease infinite;
+          height: 1rem;
+        }
+        .announcement_title {
+          background: linear-gradient(
+            130deg,
+            $gray-ccc,
+            $gray-light,
+            $gray-ccc
+          );
+          border-radius: 4px;
+          background-size: 200% 200%;
+          animation: Animation 5s ease infinite;
+          margin: 0 0 1.25rem 0;
+          height: 1.17em;
+          width: 20ch;
+        }
+        .description {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          background-size: 200% 200%;
+          background: linear-gradient(
+            130deg,
+            $gray-ccc,
+            $gray-light,
+            $gray-ccc
+          );
+          animation: Animation 5s ease infinite;
+          border-radius: 4px;
+          height: 1rem;
+          &:not(:last-child) {
+            width: 100%;
+          }
+          &:last-child {
+            width: 50%;
+          }
+        }
+
+        button {
+          float: right;
+        }
+      }
+      .card_header {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          aspect-ratio: 16/9;
+        }
+      }
+      @keyframes Animation {
+        0% {
+          background-position: 10% 0%;
+        }
+        50% {
+          background-position: 91% 100%;
+        }
+        100% {
+          background-position: 10% 0%;
+        }
+      }
+    }
+  }
+
+  .loading_container {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .loading_icon {
+    margin-left: auto;
+    margin-right: auto;
+    height: 5rem;
+    width: auto;
+    margin-bottom: 50rem;
+    @include Animation(loadingAnim 5000ms infinite linear);
+  }
+
+  @keyframes loadingAnim {
+    0% {
+      @include Transform(rotate(0deg));
+    }
+    100% {
+      @include Transform(rotate(360deg));
+    }
+  }
+
+  @include breakpoint-screen(lg) {
+    .card_holder {
+      grid-template-columns: auto;
+      .card {
+        &:first-child {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          flex: 0 1 33.3%;
+          flex-flow: column nowrap;
+          .card_header {
+            width: 100%;
+          }
+          .card_body {
+            width: auto;
+            flex-grow: unset;
+          }
+        }
+      }
+      .loading_card {
+        &:first-child {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          flex: 0 1 33.3%;
+          flex-flow: column nowrap;
+          .card_header {
+            width: 100%;
+          }
+          .card_body {
+            width: auto;
+            flex-grow: unset;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint-screen(sm) {
+    .card_holder {
+      grid-template-columns: auto;
+      .card {
+        &:first-child {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          flex: 0 1 33.3%;
+          flex-flow: column nowrap;
+          .card_header {
+            width: 100%;
+          }
+          .card_body {
+            width: auto;
+            flex-grow: unset;
+          }
+        }
+      }
+      .loading_card {
+        &:first-child {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          flex: 0 1 33.3%;
+          flex-flow: column nowrap;
+          .card_header {
+            width: 100%;
+          }
+          .card_body {
+            width: auto;
+            flex-grow: unset;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint-screen(xs) {
+    .card_holder {
+      grid-template-columns: auto;
+      .card {
+        border-radius: 0;
+        border: none;
+        &:first-child {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          flex: 0 1 33.3%;
+          flex-flow: column nowrap;
+          .card_header {
+            width: 100%;
+          }
+          .card_body {
+            width: auto;
+            flex-grow: unset;
+          }
+        }
+      }
+      .loading_card {
+        border-radius: 0;
+        border: none;
+        &:first-child {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          flex: 0 1 33.3%;
+          flex-flow: column nowrap;
+          .card_header {
+            width: 100%;
+          }
+          .card_body {
+            width: auto;
+            flex-grow: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+.viewnewsletter {
+  .content {
+    padding: 30px;
+
+    .img_content {
+      justify-content: center;
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      float: left;
+    }
+    .news_content {
+      text-align: center;
+      height: 100%;
+      .title {
+        text-align: center;
+        margin-top: 0;
+        color: $header;
+      }
+      .subtitle {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  @include breakpoint-screen(md) {
+    .content {
+      display: flex;
+      flex-flow: row nowrap;
+      .img_content {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        float: left;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+      }
+      .news_content {
+        height: 100%;
+        .title {
+          margin-top: 0;
+          color: $header;
+        }
+      }
+    }
+  }
+
+  @include breakpoint-screen(xs) {
+    .content {
+      display: flex;
+      flex-flow: row nowrap;
+      .img_content {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        float: left;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+      }
+      .news_content {
+        height: 100%;
+        .title {
+          margin-top: 0;
+          color: $header;
+          margin-left: 1.25rem;
+          margin-right: 1.25rem;
+        }
+        .subtitle {
+          margin-left: 1.25rem;
+          margin-right: 1.25rem;
+        }
+        .description {
+          p {
+            padding: 0 1.25rem;
+          }
+        }
+      }
+    }
+  }
+}

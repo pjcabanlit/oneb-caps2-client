@@ -1,0 +1,32 @@
+.EmergencyReports_container{width:100%;background:#e6edf2;height:auto}.EmergencyReports_category{padding-top:20px;background-color:#fefeff}.EmergencyReports_category label{text-transform:uppercase;font-weight:700;padding:5px}.EmergencyReports_category select{-webkit-appearance:none;appearance:none;border:1px solid #d5dbd9;width:50%;height:100%;padding:8px 10px;border-radius:3px;outline:none;font-size:16px;cursor:pointer}.tagalog_IEreport{font-style:italic;text-align:center;font-weight:600}.IncidentReport_requireNotice{font-size:15px;margin-bottom:15px}.FireReport_form{align-items:center;justify-content:center}.EmergencyReports_container .FireReport_container,.IncidentReport_container,.AccidentReport_container{width:100%;box-shadow:1px 1px 2px rgba(0,0,0,0.125)}.FireReport_container .FireReport_title h1,.IncidentReport_container .IncidentReport_title h1,.AccidentReport_container .AccidentReport_title h1{font-size:24px;font-weight:700;color:#3f3697;text-align:center;text-transform:uppercase}.report_radios{display:inline-flex;overflow:hidden;border-radius:2px;box-shadow:0 0 5px rgba(0,0,0,0.25)}.report_radio{display:none}.report_labelRadio{padding:8px 14px;font-size:14px;background:#fff;text-align:center;cursor:pointer;transition:background .1s;box-shadow:2px 2px 2px 1px rgba(0,0,0,0.125)}.report_labelRadio:not(:last-of-type){border-right:1px solid #000}.report_radio:checked + .report_labelRadio{color:#fff;background:#0061a8}.FireReport_container .FireReport_form,.IncidentReport_container .IncidentReport_form,.AccidentReport_container .AccidentReport_form{width:100%}.FireReport_container .FireReport_form .FireReport_formGroup,.IncidentReport_container .IncidentReport_form .IncidentReport_formGroup,.AccidentReport_container .AccidentReport_form .AccidentReport_formGroup{margin-bottom:15px;display:flex;align-items:center}.FireReport_form,.IncidentReport_form,.AccidentReport_form{background-color:#fefeff;box-shadow:1px 1px 2px rgba(1,1,0,0.125);padding:25px;align-items:center;justify-content:center;display:block}.FireReport_container .FireReport_form .FireReport_formGroup label,.IncidentReport_container .IncidentReport_form .IncidentReport_formGroup label,.AccidentReport_container .AccidentReport_form .AccidentReport_formGroup label{width:300px;color:#000;font-size:14px;text-transform:uppercase}.FireReport_container .FireReport_form .FireReport_formGroup .report_inputType,.IncidentReport_container
+.IncidentReport_form
+.IncidentReport_formGroup
+.report_inputType,.AccidentReport_container
+.AccidentReport_form
+.AccidentReport_formGroup
+.report_inputType{width:20%}.FireReport_container .FireReport_form .FireReport_formGroup .report_textarea,.FireReport_container .FireReport_form .FireReport_formGroup .report_inputType,.IncidentReport_container
+.IncidentReport_form
+.IncidentReport_formGroup
+.report_textarea,.IncidentReport_container
+.IncidentReport_form
+.IncidentReport_formGroup
+.report_inputType,.AccidentReport_container
+.AccidentReport_form
+.AccidentReport_formGroup
+.report_textarea,.AccidentReport_container
+.AccidentReport_form
+.AccidentReport_formGroup
+.report_inputType{outline:none;border:1px solid #d5dbd9;font-size:15px;padding:8px 10px;transition:all .3s ease}.FireReport_container .FireReport_form .FireReport_formGroup .report_textarea,.IncidentReport_container
+.IncidentReport_form
+.IncidentReport_formGroup
+.report_textarea,.AccidentReport_container
+.AccidentReport_form
+.AccidentReport_formGroup
+.report_textarea{width:50%;resize:none;height:125px}.AccidentReport_container
+.AccidentReport_form
+.AccidentReport_formGroup
+.report_select{position:relative;width:20%;height:37px}.AccidentReport_container
+.AccidentReport_form
+.AccidentReport_formGroup
+.report_select
+select{-webkit-appearance:none;appearance:none;border:1px solid #d5dbd9;width:50%;height:100%;padding:8px 10px;border-radius:3px;outline:none}.report_button .report_btn{width:20%;padding:8px 10px;font-size:15px;border:0;background:#0061a8;color:#fff;cursor:pointer;border-radius:3px;outline:none}.report_button .report_btn:hover{background:#3f3697;color:#fff}.EmergencyReports_IncidentReport_content{background:#fefeff;padding:30px 25px 25px}.EmergencyReports_IncidentReport_content h1{letter-spacing:1px;text-transform:uppercase;color:#3f3697;font-size:1.5rem}.EmergencyReports_IncidentReport_content p{font-size:16px;color:#222;text-align:justify;padding-top:20px}.EmergencyReports_IncidentReport_content ul li{padding-top:10px;color:#222;font-size:1rem;margin-left:20px;text-align:justify}.category_label{color:#3f3697}@media screen and (max-width: 600px){.EmergencyReports_IncidentReport{display:none}#emergency_incident_report_container{height:45rem}}
